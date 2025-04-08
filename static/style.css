@@ -172,3 +172,7 @@ section#inicio div#arraste a{
 *::-webkit-scrollbar-thumb{
     background-color: #00FF00;
 }
+
+.section-bg{
+background-color: #e0eee0;
+}
