@@ -121,7 +121,7 @@ section#inicio div#arraste a{
     background-color: #32CD32;
     right: 1rem;
     top: 1rem;
-    font-size: 1.5;
+    font-size: 1.5rem;
     border-radius: 4rem;
     cursor: pointer;
     z-index: 10;
@@ -218,4 +218,28 @@ background-color: #e0eee0;
     border: 2px solid #32CD32;
     background: #fff;
     border-radius: 50%;
+}
+
+.carousel-control-prev{
+    display: none;
+    margin-left: -8rem;
+}
+
+.carousel-control-next{
+    margin-right: -8rem;
+    display: none;
+}
+
+.carousel-indicators{
+    margin-bottom: -35px;
+}
+
+@media (max-width: 1860px){
+    .carousel-control-prev{
+        margin-left: 0;
+    }
+    
+    .carousel-control-next{
+        margin-right: 0;
+    }
 }
