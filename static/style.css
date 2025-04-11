@@ -269,6 +269,25 @@ background-color: #e0eee0;
         margin-right: 0;
     }
 
+}
 
+#footer{
+    padding: 15px;
+    color: #F5F5F5;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;
+    background-color: #1C1C1C;
+    transition: .3s;
+}
 
+@media (max-width: 1012px){
+    #footer{
+        position: static;
+        width: auto;
+        padding: 20px 15px;
+    }
 }
