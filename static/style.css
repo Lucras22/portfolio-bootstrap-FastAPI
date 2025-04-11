@@ -98,7 +98,7 @@ section#inicio h2{
 }
 
 section#inicio span#subtitle{
-    margin-right: 8rem;
+    margin-right: 3rem;
     font-size: 1.5rem;
 }
 
@@ -290,4 +290,24 @@ background-color: #e0eee0;
         width: auto;
         padding: 20px 15px;
     }
+}
+
+#btn-enviar{
+    background-color: #32CD32;
+    border-color: #32CD32;
+}
+
+#btn-enviar-loader{
+    background-color: #32CD32;
+    border-color: #32CD32;
+}
+
+#links-port:hover{
+    background-color: #32CD32;
+    color: #F5F5F5;
+}
+
+#links-port{
+    border-color: #32CD32;
+    color: #32CD32;
 }
