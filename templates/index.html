@@ -453,8 +453,6 @@
                 </div>
             </div>
         </section>
-
-
     </main>
 
 
@@ -478,15 +476,16 @@
       form.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        // Enviar email com EmailJS
-        emailjs.sendForm("service_gxs0fs5", "template_ndycrvl", form)
-          .then(function() {
-            alert("Mensagem enviada com sucesso!");
-            form.reset(); // limpa o formulário
-          }, function(error) {
-            console.error("Erro ao enviar:", error);
-            alert("Ocorreu um erro. Tente novamente.");
-          });
+// Enviar email com EmailJS
+  emailjs.sendForm("service_gxs0fs5", "template_ndycrvl", form)
+    .then(function() {
+      alert("Mensagem enviada com sucesso!");
+      form.reset(); // limpa o formulário
+      location.reload(); // recarrega a página
+    }, function(error) {
+      console.error("Erro ao enviar:", error);
+      alert("Ocorreu um erro. Tente novamente.");
+    });
       });
     }
   });
