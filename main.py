@@ -11,6 +11,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # 📁 Pasta dos templates
 templates = Jinja2Templates(directory="templates")
 
-@app.get("/", response_class=HTMLResponse)
+@app.api_route("/", methods=["GET", "HEAD"], response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
