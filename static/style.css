@@ -1,17 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body{
+/* CORES GERAIS TEMA DARK */
+/* Fundo Principal: #121212 */
+/* Fundo Secundário (Section-bg, Cards): #1A1A1A */
+/* Destaque (Accent): #32CD32 (Lime Green) */
+/* Texto Principal: #DCDCDC */
+/* Títulos/Texto Forte: #F5F5F5 */
+
+html, body {
     font-family: Raleway, Arial;
     width: 100%;
     height: 100%;
+    background-color: #121212; /* Fundo escuro principal */
+    color: #DCDCDC; /* Cor do texto padrão */
 }
+
+/* ---------------------------------------------------------------- */
+/* SIDEBAR (HEADER) */
+/* ---------------------------------------------------------------- */
 
 #header {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    background: #1C1C1C;
+    background: #1C1C1C; /* Mantido escuro */
     overflow-y: auto;
     width: 300px;
     transition: all ease-in-out 0.5s;
@@ -38,7 +51,7 @@ html, body{
 
 #header .profile .social-links a{
     font-size: 1rem;
-    background: #4F4F4F;
+    background: #333333; /* Fundo dos ícones escuro */
     color: #F5F5F5;
     padding: 0.6rem;
     margin-right: 1rem;
@@ -58,7 +71,7 @@ html, body{
 .nav-menu a,.nav-menu:focus{
     display: flex;
     align-items: center;
-    color: #C0C0C0;
+    color: #C0C0C0; /* Texto link inativo */
     transition: 0.3s;
     font-size: 15px;
 }
@@ -66,17 +79,21 @@ html, body{
 .nav-menu a i, .nav-menu a:focus i {
     font-size: 24px;
     padding-right: 0.8rem;
-    color: #808080;
+    color: #808080; /* Ícone link inativo */
 }
 
 .nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
     text-decoration: none;
-    color: #DCDCDC;
+    color: #F5F5F5; /* Texto link ativo/hover */
 }
 
 .nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
-    color: #32CD32;
+    color: #32CD32; /* Ícone link ativo/hover */
 }
+
+/* ---------------------------------------------------------------- */
+/* MAIN CONTENT / SECTIONS */
+/* ---------------------------------------------------------------- */
 
 #main{
     margin-left: 300px;
@@ -103,7 +120,7 @@ section#inicio span#subtitle{
 }
 
 .text-shadow{
-    text-shadow: 4px 4px 10px #1C1C1C;
+    text-shadow: 4px 4px 10px #000000; /* Sombra mais escura */
 }
 
 section#inicio div#arraste{
@@ -112,8 +129,221 @@ section#inicio div#arraste{
 
 section#inicio div#arraste a{
     text-decoration: none;
+    color: #F5F5F5; /* Texto para arrastar */
+}
+
+/* SOBRE (Section #sobre) */
+/* As listas de informações precisam de ajuste */
+#sobre .list-group-item {
+    background-color: transparent !important; /* Fundo transparente para a lista */
+    border-color: #333333 !important; /* Borda sutil */
     color: #DCDCDC;
 }
+
+#sobre a.link-dark {
+    color: #32CD32 !important; /* Destaca o link de trabalho/site */
+}
+
+/* ---------------------------------------------------------------- */
+/* BACKGROUNDS / SCROLLBAR */
+/* ---------------------------------------------------------------- */
+
+.section-bg{
+    background-color: #1A1A1A; /* Fundo escuro para seções de destaque */
+}
+
+*::-webkit-scrollbar{
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track{
+    width: 12px;
+    box-shadow: inset 0 0 .3rem #000000; /* Sombra da barra */
+    background-color: #1A1A1A; /* Fundo da barra */
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #32CD32;
+}
+
+/* HABILIDADES (Progress Bars) */
+.progress {
+    background-color: #333333 !important; /* Fundo da barra de progresso */
+}
+.progress-bar {
+    background-color: #32CD32 !important; /* Cor da barra preenchida */
+    color: #1A1A1A !important; /* Garante que o texto 35% seja legível */
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* CURRÍCULO (CV) */
+/* ---------------------------------------------------------------- */
+
+.cv .cv-title{
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #F5F5F5; /* Título mais claro */
+}
+
+.cv .cv-item{
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #32CD32;
+    position: relative;
+}
+
+.cv .cv-item h4{
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "poppins", sans-serif;
+    color: #32CD32;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item h5{
+    background: #333333; /* Fundo do período */
+    color: #F5F5F5; /* Texto do período */
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.cv .cv-item p{
+    color: #DCDCDC;
+}
+
+.cv .cv-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #32CD32;
+    background: #121212; /* Fundo do círculo na timeline */
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* PORTFÓLIO (CARDS) */
+/* ---------------------------------------------------------------- */
+
+/* Cards do Portfólio */
+#portfolio .card {
+    background-color: #1A1A1A; /* Fundo dos cards */
+    color: #DCDCDC; /* Texto dos cards */
+    border: 1px solid #333333; /* Borda sutil */
+}
+
+#portfolio .card-title {
+    color: #F5F5F5; /* Título do projeto */
+}
+
+/* Botões do Portfólio */
+#links-port {
+    border-color: #32CD32;
+    color: #32CD32;
+}
+
+#links-port:hover {
+    background-color: #32CD32;
+    color: #1A1A1A; /* Texto escuro no hover */
+}
+
+/* Ajuste para o botão do GitHub (.btn-outline-dark) para tema dark */
+.btn-outline-dark {
+    --bs-btn-color: #DCDCDC; 
+    --bs-btn-border-color: #DCDCDC;
+    --bs-btn-hover-bg: #DCDCDC;
+    --bs-btn-hover-color: #1A1A1A; 
+    --bs-btn-active-bg: #DCDCDC;
+    --bs-btn-active-border-color: #DCDCDC;
+    --bs-btn-active-color: #1A1A1A;
+}
+
+
+/* Carousel */
+.carousel-control-prev{
+    display: none;
+    margin-left: -8rem;
+}
+
+.carousel-control-next{
+    margin-right: -8rem;
+    display: none;
+}
+
+.carousel-indicators{
+    margin-bottom: -35px;
+}
+
+/* Ajuste para indicadores claros no tema dark */
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #DCDCDC; 
+}
+
+
+/* ---------------------------------------------------------------- */
+/* CONTATO (FORMULÁRIO) */
+/* ---------------------------------------------------------------- */
+
+/* Cards de Contato */
+#contato .card {
+    background-color: #1A1A1A;
+    color: #DCDCDC;
+    border: none;
+}
+
+#contato .card h4 {
+    color: #F5F5F5;
+}
+
+#contato .card p a {
+    color: #32CD32 !important; /* Destaca o link do e-mail */
+}
+
+/* Campos de Formulário */
+.form-label {
+    color: #DCDCDC;
+}
+
+.form-control {
+    background-color: #333333; /* Fundo dos campos de input */
+    border-color: #444444; /* Borda dos campos de input */
+    color: #F5F5F5; /* Cor do texto digitado */
+}
+
+.form-control:focus {
+    background-color: #333333;
+    border-color: #32CD32; /* Borda de foco com cor de acento */
+    color: #F5F5F5;
+    box-shadow: 0 0 0 0.25rem rgba(50, 205, 50, 0.25); /* Sombra de foco com cor de acento */
+}
+
+/* Botões de Ação */
+#btn-enviar{
+    background-color: #32CD32;
+    border-color: #32CD32;
+    color: #1A1A1A; /* Texto escuro no botão de acento */
+    font-weight: bold;
+}
+
+#btn-enviar-loader{
+    background-color: #32CD32;
+    border-color: #32CD32;
+    color: #1A1A1A; /* Texto escuro no botão de loading */
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------------------- */
+/* RESPONSIVIDADE / ANIMAÇÕES / FOOTER */
+/* ---------------------------------------------------------------- */
 
 .menu-mobile{
     position: fixed;
@@ -157,81 +387,6 @@ section#inicio div#arraste a{
     #main{
         margin-left: 0;
     }
-}
-
-*::-webkit-scrollbar{
-    width: 5px;
-}
-
-*::-webkit-scrollbar-track{
-    width: 12px;
-    box-shadow: inset 0 0 .3rem #1C1C1C;
-    background-color: #F5F5F5;
-}
-
-*::-webkit-scrollbar-thumb{
-    background-color: #32CD32;
-}
-
-.section-bg{
-background-color: #e0eee0;
-}
-
-.cv .cv-title{
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #1C1C1C;
-}
-
-.cv .cv-item{
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid #32CD32;
-    position: relative;
-}
-
-.cv .cv-item h4{
-    line-height: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: "poppins", sans-serif;
-    color: #32CD32;
-    margin-bottom: 10px;
-}
-
-.cv .cv-item h5{
-    background: #DCDCDC;
-    padding: 5px 15px;
-    display: inline-block;
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-.cv .cv-item::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -9px;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #32CD32;
-    background: #fff;
-    border-radius: 50%;
-}
-
-.carousel-control-prev{
-    display: none;
-    margin-left: -8rem;
-}
-
-.carousel-control-next{
-    margin-right: -8rem;
-    display: none;
-}
-
-.carousel-indicators{
-    margin-bottom: -35px;
 }
 
 [data-anime]{
@@ -290,24 +445,4 @@ background-color: #e0eee0;
         width: auto;
         padding: 20px 15px;
     }
-}
-
-#btn-enviar{
-    background-color: #32CD32;
-    border-color: #32CD32;
-}
-
-#btn-enviar-loader{
-    background-color: #32CD32;
-    border-color: #32CD32;
-}
-
-#links-port:hover{
-    background-color: #32CD32;
-    color: #F5F5F5;
-}
-
-#links-port{
-    border-color: #32CD32;
-    color: #32CD32;
 }
